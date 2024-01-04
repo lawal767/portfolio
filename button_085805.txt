@@ -1,0 +1,117 @@
+html file
+                                    <div class="row">
+                                        <div class="buttons padd-15">
+                                            <!-- <a  target="_" class="btn">Download CV</a> -->                                      
+                                               <div class="popup btn"  onclick="myFunction()"> Download CV
+                                                <span class="popuptext" id="myPopup"> 
+                                                    <p style="color: #ffffff;
+                                                              font-size: small;
+                                                              cursor: none;
+                                                              -webkit-transition: all 0.3s ease;
+                                                              transition: all 0.3s ease;"
+                                                              >
+                                                              Hi! click on any format to download my cv
+                                                            </p>
+                                                    <a href="https://docs.google.com/document/d/1I_Homlz-SmcJ4Xv40pZy5q1yOv_KYnSTZOpPANouAJU/edit?usp=sharing"  target="_">
+                                                        <button style="
+                                                            font-size: 12px;
+                                                            font-weight: 300;
+                                                            padding: 5px 3px;
+                                                            color: #3e99f4;
+                                                            border-radius: 4px;
+                                                            -webkit-transition: all 0.3s ease;
+                                                            transition: all 0.3s ease;
+                                                            display: inline-block;
+                                                            margin-top: 0.5rem;
+                                                            white-space: nowrap;
+                                                            margin-right: 1rem;
+                                                            border: none;
+                                                            cursor: pointer;
+                                                            ">  MSWord Format
+                                                        </button>
+                                                    </a>
+                                                    <a href= "https://drive.google.com/file/d/18WQygPH6MlueBeVwP49IE0jFr2Cs1SJB/view?usp=sharing" target="_">
+                                                        <button style="
+                                                            font-size: 12px;
+                                                            font-weight: 300;
+                                                            padding: 5px 3px;
+                                                            color: #ec1839;
+                                                            border-radius: 4px;
+                                                            -webkit-transition: all 0.2s ease;
+                                                            transition: all 0.2s ease;
+                                                            display: inline-block;
+                                                            white-space: normal;
+                                                            border: none;
+                                                            cursor: pointer;
+                                                            ">PDF Format
+                                                        </button>
+                                                    </a>
+                                                </span>
+                                                </div>
+                                       </div>
+                                    </div>
+
+js file
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
+css file
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #555;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  /* .popup .popuptext .show .p {
+      background-color: #d4d4e3;
+  } */
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
